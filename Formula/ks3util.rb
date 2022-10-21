@@ -1,22 +1,19 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class KS3UtilDarwin < Formula
-  desc "https://github.com/wilac-pv/homebrew-brew"
-  homepage "https://github.com/wilac-pv/homebrew-brew"
-  url "https://ks3util-version-update.ks3-cn-beijing.ksyuncs.com:443/brew/ks3util-darwin.tar.gz"
+class Ks3util < Formula
+  desc ""
+  homepage ""
+  url "https://ks3util-version-update.ks3-cn-beijing.ksyuncs.com:443/brew/ks3util.tar.gz"
   version "2.0.1"
-  sha256 "b7ed0ed89e1e69885cd75966eb41fa80c4d5d582d47235541900205ea4794ddf"
+  sha256 "6e17ef5fa0703968203cab9f7461f40e48e7b43af46a54a46acf9bb9b339fd1c"
   license ""
 
   # depends_on "cmake" => :build
 
+
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
-    # Remove unrecognized options if warned by configure
-    # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-    system "./configure", *std_configure_args, "--disable-silent-rules"
-    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    bin.install "ks3util"
   end
 
   test do
@@ -24,7 +21,7 @@ class KS3UtilDarwin < Formula
     #
     # This test will fail and we won't accept that! For Homebrew/homebrew-core
     # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test ks3util-darwin`. Options passed
+    # software. Run the test with `brew test ks3util`. Options passed
     # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
     #
     # The installed folder is not in the path, so use the entire path to any
