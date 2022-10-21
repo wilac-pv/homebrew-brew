@@ -1,22 +1,19 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class Ks3util < Formula
+class Ks3utilArm < Formula
   desc ""
   homepage ""
-  url "https://ks3util-version-update.ks3-cn-beijing.ksyuncs.com:443/brew/ks3util.tar.gz"
+  url "https://ks3util-version-update.ks3-cn-beijing.ksyuncs.com/brew/ks3utilArm.tar.gz"
   version "2.0.1"
-  sha256 "6e17ef5fa0703968203cab9f7461f40e48e7b43af46a54a46acf9bb9b339fd1c"
+  sha256 "3776a93d330af0ed6af3f0b217a9d9e07b79f9a5a6232453d95b6f98ab82a54c"
   license ""
 
   # depends_on "cmake" => :build
 
+
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
-    # Remove unrecognized options if warned by configure
-    # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-    system "./configure", *std_configure_args, "--disable-silent-rules"
-    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    bin.install "ks3util"
   end
 
   test do
