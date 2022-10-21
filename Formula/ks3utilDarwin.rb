@@ -1,7 +1,7 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class Ks3utilDarwin < Formula
+class KS3utilDarwin.rb < Formula
   desc "https://github.com/wilac-pv/homebrew-brew"
   homepage "https://github.com/wilac-pv/homebrew-brew"
   url "https://ks3util-version-update.ks3-cn-beijing.ksyuncs.com:443/brew/ks3util-darwin.tar.gz"
